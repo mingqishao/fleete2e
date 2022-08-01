@@ -2,6 +2,7 @@
 
 resourceGroup="${1:-myResourceGroup}"
 fleet="${2:-myFleet}"
+
 body=$(cat <<-END
 {
     "tags": {
