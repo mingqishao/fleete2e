@@ -39,10 +39,9 @@ body=$(cat <<-END
         "fleetResourceId":"$fleetID",
         "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
         "fleetHubUrl":"$fleetHubURL",
-        "certificateAuthorityData":"$ca",
+        "certificateAuthorityData":"$ca"
     },
-    "name":"default",
-    "type":"Microsoft.Compute/fleetMembershipExtension",
+    "name":"default"
 }
 END
 )
@@ -53,4 +52,4 @@ curl -v -X PUT \
  -H "Content-Type: application/json" \
  -H "x-ms-home-tenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47" \
  --data "$body" \
-"http://localhost:8081/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourcegroups/$memberResourceGroup/providers/Microsoft.ContainerService/managedClusters/memberCluster/providers/Microsoft.ContainerService/fleetMemberships/default?api-version=2022-06-02-preview"
+"http://localhost:8080/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourcegroups/$memberResourceGroup/providers/Microsoft.ContainerService/managedClusters/$memberCluster/providers/Microsoft.ContainerService/fleetMemberships/default?api-version=2022-06-02-preview"
