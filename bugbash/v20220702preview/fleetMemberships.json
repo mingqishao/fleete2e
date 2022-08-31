@@ -1,0 +1,339 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ContainerServiceClient",
+    "description": "The Container Service Client.",
+    "version": "2022-06-02-preview"
+  },
+  "host": "management.azure.com",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "security": [
+    {
+      "azure_auth": [
+        "user_impersonation"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "azure_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "flow": "implicit",
+      "description": "Azure Active Directory OAuth2 Flow",
+      "scopes": {
+        "user_impersonation": "impersonate your user account"
+      }
+    }
+  },
+  "paths": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterResourceProviderName}/{clusterResourceType}/{clusterName}/providers/Microsoft.ContainerService/fleetMemberships/{fleetMembershipName}": {
+      "put": {
+        "tags": [
+          "FleetMemberships"
+        ],
+        "operationId": "FleetMemberships_CreateOrUpdate",
+        "summary": "Creates or updates a fleet membership extension resource.",
+        "parameters": [
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceProviderNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceTypeParameter"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/ClusterNameParameter"
+          },
+          {
+            "$ref": "#/parameters/FleetMembershipNameParameter"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/IfMatchHeader"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/IfNoneMatchHeader"
+          },
+          {
+            "name": "parameters",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FleetMembershipExtension"
+            },
+            "description": "The fleet membership extension to create or update."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/FleetMembershipExtension"
+            }
+          },
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/FleetMembershipExtension"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Create a fleet membership extension resource. Starts the member agent on the joining cluster": {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/examples/FleetMemberships_CreateOrUpdate.json"
+          },
+          "Create a fleet membership extension resource using the If-None-Match header to ensure not to update an existing resource.": {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/examples/FleetMemberships_CreateEtagIfNoneMatch.json"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "FleetMemberships"
+        ],
+        "operationId": "FleetMemberships_Get",
+        "summary": "Gets a fleet membership extension resource.",
+        "parameters": [
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceProviderNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceTypeParameter"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/ClusterNameParameter"
+          },
+          {
+            "$ref": "#/parameters/FleetMembershipNameParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/FleetMembershipExtension"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Gets a fleet membership extension resource": {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/examples/FleetMemberships_Get.json"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "FleetMemberships"
+        ],
+        "operationId": "FleetMemberships_Delete",
+        "summary": "Deletes a fleet membership resource. This results in the member cluster leaving the fleet.",
+        "parameters": [
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceProviderNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceTypeParameter"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/ClusterNameParameter"
+          },
+          {
+            "$ref": "#/parameters/FleetMembershipNameParameter"
+          },
+          {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/fleets.json#/parameters/IfMatchHeader"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "OK"
+          },
+          "204": {
+            "description": "NoContent"
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-examples": {
+          "Deletes a fleet membership extension resource": {
+            "$ref": "../specs/specification/containerservice/resource-manager/Microsoft.ContainerService/preview/2022-06-02-preview/examples/FleetMemberships_Delete.json"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FleetMembershipExtension": {
+      "type": "object",
+      "description": "The FleetMembershipExtension is applied on Kubernetes cluster resources that are part of a Fleet. It contains a reference to the Fleet resource id.",
+      "properties": {
+        "properties": {
+          "description": "Properties of the FleetMembership extension resource.",
+          "$ref": "#/definitions/FleetMembershipExtensionProperties",
+          "x-ms-client-flatten": true
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../specs/specification/common-types/resource-management/v3/types.json#/definitions/AzureEntityResource"
+        }
+      ]
+    },
+    "FleetMembershipExtensionProperties": {
+      "type": "object",
+      "description": "The properties of a fleet membership extension.",
+      "required": [
+        "tenantId",
+        "fleetResourceId",
+        "fleetHubUrl",
+        "certificateAuthorityData",
+        "memberName"
+      ],
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ],
+          "description": "The tenant id of the user"
+        },
+        "fleetResourceId": {
+          "type": "string",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ],
+          "description": "The resource id of the fleet this member has joined. Must be a valid fleet resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}'."
+        },
+        "fleetHubUrl": {
+          "type": "string",
+          "description": "The fleet hub url the member will connect to."
+        },
+        "certificateAuthorityData": {
+          "type": "string",
+          "description": "CertificateAuthorityData contains PEM-encoded certificate authority certificates to trust the hub cluster's TLS. The data is passed as a base64 encoded string."
+        },
+        "memberName": {
+          "type": "string",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ],
+          "description": "The member's name in the fleet"
+        },
+        "provisioningState": {
+          "readOnly": true,
+          "type": "string",
+          "x-ms-enum": {
+            "name": "FleetMembershipProvisioningState",
+            "modelAsString": true
+          },
+          "enum": [
+            "Succeeded",
+            "Failed",
+            "Canceled",
+            "Joining",
+            "Leaving",
+            "Updating"
+          ],
+          "description": "The provisioning state of the last accepted operation."
+        }
+      }
+    }
+  },
+  "parameters": {
+    "FleetMembershipNameParameter": {
+      "name": "fleetMembershipName",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 63,
+      "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$",
+      "description": "The name of the fleet membership resource.",
+      "x-ms-parameter-location": "method"
+    },
+    "ClusterResourceProviderNameParameter": {
+      "name": "clusterResourceProviderName",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "x-ms-enum": {
+        "name": "MemberClusterResourceProvider",
+        "modelAsString": true
+      },
+      "enum": [
+        "Microsoft.ContainerService"
+      ],
+      "description": "The Kubernetes cluster resource provider - i.e. Microsoft.ContainerService.",
+      "x-ms-parameter-location": "method"
+    },
+    "ClusterResourceTypeParameter": {
+      "name": "clusterResourceType",
+      "in": "path",
+      "required": true,
+      "type": "string",
+      "x-ms-enum": {
+        "name": "MemberClusterResourceType",
+        "modelAsString": true
+      },
+      "enum": [
+        "managedClusters"
+      ],
+      "description": "The Kubernetes cluster resource type - i.e. managedClusters",
+      "x-ms-parameter-location": "method"
+    }
+  }
+}

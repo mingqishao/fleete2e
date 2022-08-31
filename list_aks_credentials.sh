@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cluster="${1:-myCluster}"
-resourceGroup="$cluster-rg"
+resourceGroup="${1:-myCluster}"
+cluster="${2:-myCluster}"
 
 curl -v -X POST \
  -H "x-ms-home-tenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47" \
