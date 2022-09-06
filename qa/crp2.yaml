@@ -1,0 +1,21 @@
+apiVersion: fleet.azure.com/v1alpha1
+kind: ClusterResourcePlacement
+metadata:
+  name: crp2
+spec:
+  resourceSelectors:
+    - group: ""
+      version: v1
+      kind: Namespace
+      name: work 
+    - group: rbac.authorization.k8s.io
+      version: v1
+      kind: ClusterRole
+      labelSelector:
+        matchLabels:
+          fleet.azure.com/name: test
+  policy:
+    clusterNames:
+      - aks-member-1
+      - aks-member-2
+      - aks-member-4

@@ -1,0 +1,24 @@
+apiVersion: fleet.azure.com/v1alpha1
+kind: ClusterResourcePlacement
+metadata:
+  name: crp1
+spec:
+  resourceSelectors:
+    - group: ""
+      version: v1
+      kind: Namespace
+      name: app 
+    - group: rbac.authorization.k8s.io
+      version: v1
+      kind: ClusterRole
+      labelSelector:
+        matchLabels:
+          fleet.azure.com/name: test
+  policy:
+    affinity:
+      clusterAffinity:
+        clusterSelectorTerms:
+          - labelSelector:
+              matchLabels:
+                fleet.azure.com/resource-group: minsha-test-work-2
+                fleet.azure.com/subscription-id: 3959ec86-5353-4b0c-b5d7-3877122861a0

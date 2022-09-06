@@ -511,13 +511,20 @@ func BatchCreateAKS(opts *batchAKSOptions) {
 }
 
 type batchFleetOptions struct {
-	name      string
-	memberNum int
+	name           string
+	memberNum      int
+	isPrivate      string
+	network        string
+	fleetLocation  string
+	memberLocation string
 }
 
 func BatchCreateFleet(opts *batchFleetOptions) {
 	name := opts.name
 	l := randomAKSOpts().location
+	if opts.fleetLocation != "" {
+		l = opts.fleetLocation
+	}
 	fmt.Println(l)
 	_, err := createGroup(name, l)
 	if err != nil {
@@ -535,8 +542,20 @@ func BatchCreateFleet(opts *batchFleetOptions) {
 	csv(name, l)
 	for i := 1; i <= opts.memberNum; i++ {
 		aksName := fmt.Sprintf("aks-member-%d", i)
-		opts := randomAKSOpts()
-		_, err := createAKS(name, aksName, opts)
+		aksOpts := randomAKSOpts()
+		if opts.isPrivate == "yes" || opts.isPrivate == "true" {
+			aksOpts.isPrivate = true
+		}
+		if opts.isPrivate == "no" || opts.isPrivate == "false" {
+			aksOpts.isPrivate = false
+		}
+		if opts.network != "" {
+			aksOpts.networkPlugin = opts.network
+		}
+		if opts.memberLocation != "" {
+			aksOpts.location = opts.memberLocation
+		}
+		_, err := createAKS(name, aksName, aksOpts)
 		if err != nil {
 			fmt.Println(err)
 			return
@@ -550,7 +569,7 @@ func BatchCreateFleet(opts *batchFleetOptions) {
 		}
 		fmt.Println("created member", aksName)
 		a := []string{aksName}
-		a = opts.toCSV(a)
+		a = aksOpts.toCSV(a)
 		csv(a...)
 	}
 }
@@ -560,6 +579,10 @@ func runCmd() {
 	fleetOpts := &batchFleetOptions{}
 	fleet.StringVar(&fleetOpts.name, "name", "", "fleet name")
 	fleet.IntVar(&fleetOpts.memberNum, "num", 10, "member number")
+	fleet.StringVar(&fleetOpts.isPrivate, "private", "", "if private API Server: yes/or")
+	fleet.StringVar(&fleetOpts.network, "network", "", "network plugin: azure/kubenet")
+	fleet.StringVar(&fleetOpts.memberLocation, "member-location", "", "member location")
+	fleet.StringVar(&fleetOpts.fleetLocation, "fleet-location", "", "fleet location")
 
 	aks := flag.NewFlagSet("aks", flag.ExitOnError)
 	aksOpts := &batchAKSOptions{}
