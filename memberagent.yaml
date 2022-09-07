@@ -1,0 +1,210 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2022-08-04T08:13:33Z"
+  generateName: fleet-member-agent-754db9f4b6-
+  labels:
+    app.kubernetes.io/name: fleet-member-agent
+    kubernetes.azure.com/mdsd-tag: mdsd.fleetagent
+    kubernetes.azure.com/mdsd-transform: ccp_namespace
+    pod-template-hash: 754db9f4b6
+    tier: control-plane
+  name: fleet-member-agent-754db9f4b6-4xfqm
+  namespace: 62eb36b80287d3000132f3eb
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: fleet-member-agent-754db9f4b6
+    uid: 610821ef-4cea-4d33-b62d-983a62c91725
+  resourceVersion: "289405"
+  uid: fff222bd-f473-4d33-b59f-ccbce4bbca9f
+spec:
+  containers:
+  - env:
+    - name: SUBSCRIPTION_ID
+      value: 8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8
+    - name: RESOURCE_GROUP_NAME
+      value: minshaebld58588564
+    - name: MANAGED_CLUSTER_NAME
+      value: minshamember9900
+    - name: CONTROL_PLANE_ID
+      value: 62eb36b80287d3000132f3eb
+    image: mcr.microsoft.com/aks/ccp/msi-adapter:master.220529.1
+    imagePullPolicy: IfNotPresent
+    name: msi-adapter
+    resources: {}
+    securityContext:
+      capabilities:
+        add:
+        - NET_ADMIN
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-7s47q
+      readOnly: true
+  - args:
+    - azure
+    - --clientid=any-client-id
+    - --v=5
+    image: mcr.microsoft.com/aks/fleet/refresh-token:v0.1.0
+    imagePullPolicy: IfNotPresent
+    name: refresh-token
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /config
+      name: provider-token
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-7s47q
+      readOnly: true
+  - args:
+    - --kubeconfig=/etc/kubernetes/kubeconfig/kubeconfig.yaml
+    - --tls-insecure=true
+    - --v=5
+    env:
+    - name: HUB_SERVER_URL
+      value: https://minshafleet9900-b22a162c.hcp.minshaebld58588564.e2e.azmk8s.io:443
+    - name: CONFIG_PATH
+      value: /config/token
+    - name: MEMBER_CLUSTER_NAME
+      value: minshamember9900
+    - name: HUB_CERTIFICATE_AUTHORITY
+      value: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2VENDQWRHZ0F3SUJBZ0lSQUx2VVNmVGV3TTJIbTdYbEYrRU1pWEF3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdJQmNOTWpJd09EQTBNREV3T1RFeVdoZ1BNakExTWpBNE1EUXdNVEU1TVRKYQpNQTB4Q3pBSkJnTlZCQU1UQW1OaE1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBCjUyK0hWZExOT3NIaS9LNmFnTFgraGZzYXdUa05BTHZlRFdqWFk3aXQ4bnd1RHJCa244OCs0OCtIVnRONHlNYUwKbjRLOFJtNGJPUXRCZHdhNmZnWlAyQjZXd0E4SS8vNk9YUVFSNUdzVEFyTkxidEtTc3kzTEcxeEkrSjd5bXN3SApnVHNjbEM5MVZUU3pTOVQ3NXlOY0o4SU90YkV6WEJBWWF2cTFiTnhaMzZES3JlQ0lCOEhyNXFyWEhWcG5uUDNPCmc0V29sSVBHQkZvM2JpYjhwRUZSMzBOZTIxbTBHYTdHSHNuVXA2Uy9NVTNNZ1VJUlJmK1Jtb2dkK3ptR3NGQTcKdWFsSG93M29icEtGOTFIWUpLTFVKZEpBek9JOGphK0FyU2FkbGczbE8xWVg4RjVCWlRLcjhuQ2RJOUNzTWFnRgo1N05QY1dEMFhXenNjRk9VRVhGVnVRSURBUUFCbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQXFRd0R3WURWUjBUCkFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVVuR0R1Q3NEUll3Qit1U0NEREpOZjBuU3RLd293RFFZSktvWkkKaHZjTkFRRUxCUUFEZ2dFQkFNSW01M0FMQ1JodVBBZTN6cFNEa3pSZTZVd3FiRnB3R1JXdmlHdmxOLzdRN3Q0RAoyOEZ4Yk9jTkJMc3JYUCtSSGROYkVzcFpNTURZdy9YV283TWtLbkZUZnI1dVk5WFpFRkdjMEdMYlQ1ckVYeXlICm5YRityMUp6U3gzSXJCU0Vtemw0TXZicmx1MHNmYjBEM3ZBSDEvckIwdzBYeWRUODBpdGtxK1NLNlFSRGFYekUKbE9DazBaLzhhMTFtSno3UTZWNXpNOVZRS1hMQlFvc3dNUEIvUXV3UTJtdkZZeGE0Y01kUmszSWp0VHpnRndVYgphUEFINmh1RXFPTloxNEhVNUxyam1ucVRyZEx2bFBqWW4xbFNTaWxCR1ZSM0ZqK1BjUDBPT3IrMWp0ajhrR2FHCjJkKzBNbUlpMlVZay9ZU1N4NGpZMTJuSG5LTGcvOWNyMDFibVJUYz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    image: mcr.microsoft.com/aks/fleet/member-agent:v0.1.0
+    imagePullPolicy: IfNotPresent
+    name: fleet-member-agent
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/kubernetes/kubeconfig
+      name: kubeconfig
+      readOnly: true
+    - mountPath: /config
+      name: provider-token
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-7s47q
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: aks-agentpool1-19608484-vmss000003
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: provider-token
+  - name: kubeconfig
+    secret:
+      defaultMode: 420
+      secretName: kubeconfig-file
+  - name: kube-api-access-7s47q
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2022-08-04T08:13:33Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2022-08-04T08:13:34Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2022-08-04T08:13:34Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2022-08-04T08:13:33Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://78e8f769db8d0a7f7607d51078493b3f5d03353f87f6d5497ddc6d766ce8c2f3
+    image: mcr.microsoft.com/aks/fleet/member-agent:v0.1.0
+    imageID: mcr.microsoft.com/aks/fleet/member-agent@sha256:4447cad69d149f9883209ca995a72d5ac63ccf472717635aa49f6e63d3cb297b
+    lastState: {}
+    name: fleet-member-agent
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2022-08-04T08:13:34Z"
+  - containerID: containerd://8e14c33b1aad4131e3a3d818b9fd506387496c5bbc380a690bd38532b7b58d54
+    image: mcr.microsoft.com/aks/ccp/msi-adapter:master.220529.1
+    imageID: mcr.microsoft.com/aks/ccp/msi-adapter@sha256:8b076e0564860712ff6a71d162e6abbcfcc95813bef8d6b2a821b822740a1696
+    lastState: {}
+    name: msi-adapter
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2022-08-04T08:13:34Z"
+  - containerID: containerd://ed515665d0cdf34fffb5f99cec7f40f0b5340d83c0c2b5b33bfd073ac29504e3
+    image: mcr.microsoft.com/aks/fleet/refresh-token:v0.1.0
+    imageID: mcr.microsoft.com/aks/fleet/refresh-token@sha256:7b6d92b7b456ff243819d98d06b97ad580c6a7324e060f489786f5d698b5e1cc
+    lastState: {}
+    name: refresh-token
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2022-08-04T08:13:34Z"
+  hostIP: 10.224.0.7
+  phase: Running
+  podIP: 172.24.1.61
+  podIPs:
+  - ip: 172.24.1.61
+  qosClass: Burstable
+  startTime: "2022-08-04T08:13:33Z"

@@ -1,0 +1,4 @@
+bugbash-fleet-5,westus
+aks-member-1,northeurope,Public,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.170.0/24
+aks-member-2,germanywestcentral,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.163.0/24
+aks-member-3,eastus2,Public,Paid,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.219.0/24

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bash
+  namespace: default
+spec:
+  shareProcessNamespace: true
+  containers:
+  - image: shaomq/env
+    imagePullPolicy: Always
+    name: bash
+    resources:
+      requests:
+        memory: 1G
+        cpu: 0.1
+    volumeMounts:
+    - mountPath: /etc/acs/azure.json
+      name: aks-credential
+    - mountPath: /etc/kubernetes/certs
+      name: certificates
+      readOnly: true
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/azure.json
+      type: File
+    name: aks-credential
+  - hostPath:
+      path: /etc/kubernetes/certs
+      type: ""
+    name: certificates

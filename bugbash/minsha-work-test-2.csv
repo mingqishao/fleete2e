@@ -1,0 +1,4 @@
+csv:minsha-test-work-2,northeurope
+csv:aks-member-1,southafricanorth,Public,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.57.0/24
+csv:aks-member-2,japaneast,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+csv:aks-member-3,francecentral,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,azure,10.240.246.0/24

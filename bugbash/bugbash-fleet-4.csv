@@ -1,0 +1,4 @@
+bugbash-fleet-4,eastasia
+aks-member-1,eastasia,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.166.0/24
+aks-member-2,eastasia,Public,Free,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.138.0/24
+aks-member-3,eastasia,Public,Paid,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.132.0/24

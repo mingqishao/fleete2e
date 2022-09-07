@@ -1,0 +1,17 @@
+bugbash-aks-group1-aks-1,uksouth,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.53.0/24
+bugbash-aks-group1-aks-2,norwayeast,Public,Free,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.9.0/24
+bugbash-aks-group1-aks-3,northeurope,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,kubenet,
+bugbash-aks-group1-aks-4,japaneast,Private,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.198.0/24
+bugbash-aks-group1-aks-5,uksouth,Public,Paid,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.158.0/24
+bugbash-aks-group1-aks-6,westus3,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.168.0/24
+bugbash-aks-group1-aks-7,brazilsouth,Public,Free,UserAssigned,AAD Enable,Not AAD RBAC,kubenet,
+bugbash-aks-group1-aks-8,northeurope,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+bugbash-aks-group1-aks-9,australiaeast,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+bugbash-aks-group1-aks-10,centralindia,Public,Paid,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.172.0/24
+bugbash-aks-group1-aks-12,francecentral,Public,Free,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.124.0/24
+bugbash-aks-group1-aks-13,koreacentral,Private,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.180.0/24
+bugbash-aks-group1-aks-14,northeurope,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.130.0/24
+bugbash-aks-group1-aks-15,francecentral,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.154.0/24
+bugbash-aks-group1-aks-16,eastasia,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+bugbash-aks-group1-aks-17,canadacentral,Private,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.47.0/24
+bugbash-aks-group1-aks-18,centralindia,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.211.0/24

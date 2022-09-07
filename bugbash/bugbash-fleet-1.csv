@@ -1,0 +1,13 @@
+aks-member-1,canadacentral,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.196.0/24
+aks-member-2,westeurope,Public,Paid,UserAssigned,AAD Enable,Not AAD RBAC,kubenet,
+aks-member-3,westus2,Private,Paid,SystemAssigned,AAD Enable,AAD RBAC,kubenet,
+aks-member-4,australiaeast,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-5,koreacentral,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.252.0/24
+aks-member-6,northeurope,Public,Paid,UserAssigned,AAD Enable,AAD RBAC,azure,10.240.221.0/24
+aks-member-7,brazilsouth,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-8,westeurope,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,azure,10.240.22.0/24
+aks-member-9,southeastasia,Public,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.103.0/24
+aks-member-10,centralindia,Private,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-11,westeurope,Private,Free,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.29.0/24
+aks-member-12,centralindia,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,kubenet,
+aks-member-13,francecentral,Private,Paid,SystemAssigned,AAD Enable,Not AAD RBAC,kubenet,

@@ -1,0 +1,19 @@
+aks-member-1,westus3,Private,Paid,SystemAssigned,AAD Enable,AAD RBAC,azure,10.240.152.0/24
+aks-member-2,northeurope,Private,Paid,SystemAssigned,AAD Enable,AAD RBAC,kubenet,
+aks-member-3,centralus,Public,Paid,UserAssigned,AAD Enable,Not AAD RBAC,kubenet,
+aks-member-4,southafricanorth,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,azure,10.240.126.0/24
+aks-member-5,centralindia,Private,Free,UserAssigned,AAD Enable,AAD RBAC,kubenet,
+aks-member-6,australiaeast,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,kubenet,
+aks-member-7,switzerlandnorth,Private,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-8,uksouth,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.179.0/24
+aks-member-9,eastus2,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-10,southeastasia,Private,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-11,uksouth,Private,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.131.0/24
+aks-member-12,southafricanorth,Public,Paid,SystemAssigned,AAD Enable,AAD RBAC,azure,10.240.235.0/24
+aks-member-13,eastus2,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-14,westus3,Private,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.41.0/24
+aks-member-15,australiaeast,Private,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,kubenet,
+aks-member-16,northeurope,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,kubenet,
+aks-member-17,australiaeast,Public,Paid,SystemAssigned,AAD Enable,Not AAD RBAC,azure,10.240.136.0/24
+aks-member-18,southeastasia,Public,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.199.0/24
+aks-member-19,westus2,Private,Free,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.166.0/24
