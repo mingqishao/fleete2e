@@ -1,0 +1,20 @@
+bugbash-aks-group3-aks-1,australiaeast,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,172.16.122.0/24
+bugbash-aks-group3-aks-2,eastus2,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.36.0/24
+bugbash-aks-group3-aks-3,brazilsouth,Public,Free,SystemAssigned,AAD Enable,Not AAD RBAC,azure,172.16.107.0/24
+bugbash-aks-group3-aks-4,northeurope,Public,Paid,SystemAssigned,AAD Enable,AAD RBAC,azure,172.16.67.0/24
+bugbash-aks-group3-aks-5,eastus2,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,azure,172.16.126.0/24
+bugbash-aks-group3-aks-6,southeastasia,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.23.0/24
+bugbash-aks-group3-aks-7,francecentral,Public,Free,UserAssigned,AAD Enable,Not AAD RBAC,azure,172.16.100.0/24
+bugbash-aks-group3-aks-8,eastus2,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.113.0/24
+bugbash-aks-group3-aks-9,canadacentral,Public,Free,SystemAssigned,AAD Enable,AAD RBAC,azure,172.16.230.0/24
+bugbash-aks-group3-aks-10,northeurope,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.25.0/24
+bugbash-aks-group3-aks-11,southcentralus,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.124.0/24
+bugbash-aks-group3-aks-12,southcentralus,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.49.0/24
+bugbash-aks-group3-aks-13,westus3,Public,Free,UserAssigned,AAD Enable,AAD RBAC,azure,172.16.28.0/24
+bugbash-aks-group3-aks-14,germanywestcentral,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.168.0/24
+bugbash-aks-group3-aks-15,westus2,Public,Free,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.1.0/24
+bugbash-aks-group3-aks-16,swedencentral,Public,Free,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.235.0/24
+bugbash-aks-group3-aks-17,centralus,Public,Free,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.229.0/24
+bugbash-aks-group3-aks-18,switzerlandnorth,Public,Paid,UserAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.253.0/24
+bugbash-aks-group3-aks-19,southcentralus,Public,Paid,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,172.16.214.0/24
+bugbash-aks-group3-aks-20,swedencentral,Public,Paid,SystemAssigned,AAD Enable,AAD RBAC,azure,172.16.171.0/24

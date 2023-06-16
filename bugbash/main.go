@@ -93,7 +93,7 @@ func (o aksOpts) toCSV(r []string) []string {
 	}
 	r = append(r, o.networkPlugin)
 	if o.networkPlugin == "azure" {
-		r = append(r, fmt.Sprintf("10.240.%d.0/24", o.addressSpace))
+		r = append(r, fmt.Sprintf("172.16.%d.0/24", o.addressSpace))
 	} else {
 		r = append(r, "")
 	}
@@ -337,13 +337,13 @@ func createAKS(rg, name string, opts *aksOpts) (*armcontainerservice.ManagedClus
 	}
 	if opts.networkPlugin == "azure" {
 		vnetName := fmt.Sprintf("vnet-%s", opts.location)
-		vnet, err := createVNET(rg, vnetName, opts.location, "10.0.0.0/8")
+		vnet, err := createVNET(rg, vnetName, opts.location, "172.16.0.0/12")
 		if err != nil {
 			return nil, err
 		}
 		fmt.Println("created VNET", *vnet.ID)
 		subnetName := fmt.Sprintf("subnet-%d", opts.addressSpace)
-		subnetAddr := fmt.Sprintf("10.240.%d.0/24", opts.addressSpace)
+		subnetAddr := fmt.Sprintf("172.16.%d.0/24", opts.addressSpace)
 		subnetId, err := createSubnet(rg, vnetName, subnetName, subnetAddr)
 		if err != nil {
 			return nil, err
@@ -482,8 +482,10 @@ func csv(a ...string) {
 }
 
 type batchAKSOptions struct {
-	prefix string
-	num    int
+	prefix    string
+	num       int
+	isPrivate string
+	network   string
 }
 
 func BatchCreateAKS(opts *batchAKSOptions) {
@@ -497,15 +499,24 @@ func BatchCreateAKS(opts *batchAKSOptions) {
 	fmt.Println("created resource group", prefix)
 	for i := 1; i <= opts.num; i++ {
 		aksName := fmt.Sprintf("%s-aks-%d", prefix, i)
-		opts := randomAKSOpts()
-		_, err := createAKS(prefix, aksName, opts)
+		aksOpts := randomAKSOpts()
+		if opts.isPrivate == "yes" || opts.isPrivate == "true" {
+			aksOpts.isPrivate = true
+		}
+		if opts.isPrivate == "no" || opts.isPrivate == "false" {
+			aksOpts.isPrivate = false
+		}
+		if opts.network != "" {
+			aksOpts.networkPlugin = opts.network
+		}
+		_, err := createAKS(prefix, aksName, aksOpts)
 		if err != nil {
 			fmt.Println(err)
 			return
 		}
 		fmt.Println("created aks", aksName)
 		a := []string{aksName}
-		a = opts.toCSV(a)
+		a = aksOpts.toCSV(a)
 		csv(a...)
 	}
 }
@@ -588,6 +599,8 @@ func runCmd() {
 	aksOpts := &batchAKSOptions{}
 	aks.StringVar(&aksOpts.prefix, "prefix", "", "name prefix")
 	aks.IntVar(&aksOpts.num, "num", 10, "aks number")
+	aks.StringVar(&aksOpts.isPrivate, "private", "", "if private API Server: yes/or")
+	aks.StringVar(&aksOpts.network, "network", "", "network plugin: azure/kubenet")
 
 	cmd := os.Args[1]
 	if cmd == "fleet" {

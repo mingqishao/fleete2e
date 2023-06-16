@@ -61,9 +61,7 @@ kind: Service
 metadata:
   name: app
 spec:
-  type: ClusterIP
-  selector:
-    app: hello-world
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080

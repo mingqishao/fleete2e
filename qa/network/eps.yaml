@@ -1,0 +1,16 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: app
+  labels:
+    kubernetes.io/service-name: app
+addressType: IPv4
+ports:
+  - name: http
+    protocol: TCP
+    port: 8080
+endpoints:
+  - addresses:
+      - "10.240.130.16"
+    conditions:
+      ready: true

@@ -1,0 +1,4 @@
+csv:minsha-network-cross-region,westeurope
+csv:aks-member-1,swedencentral,Public,Free,SystemAssigned,Not AAD Enable,Not AAD RBAC,azure,10.240.142.0/24
+csv:aks-member-2,norwayeast,Public,Paid,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.148.0/24
+csv:aks-member-3,westus3,Public,Free,UserAssigned,AAD Enable,Not AAD RBAC,azure,10.240.249.0/24
