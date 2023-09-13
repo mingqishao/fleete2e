@@ -1,0 +1,453 @@
+Defaulted container "kube-proxy" out of: kube-proxy, ccp-coredns, proxy, private-connect-router, ccp-webhook, kube-apiserver, node-labels, external-tools-kubectl (init), private-connect-initializer (init), net (init)
+I0910 21:42:51.672104       1 flags.go:64] FLAG: --add-dir-header="false"
+I0910 21:42:51.672153       1 flags.go:64] FLAG: --alsologtostderr="false"
+I0910 21:42:51.672158       1 flags.go:64] FLAG: --bind-address="0.0.0.0"
+I0910 21:42:51.672164       1 flags.go:64] FLAG: --bind-address-hard-fail="false"
+I0910 21:42:51.672170       1 flags.go:64] FLAG: --boot-id-file="/proc/sys/kernel/random/boot_id"
+I0910 21:42:51.672175       1 flags.go:64] FLAG: --cleanup="false"
+I0910 21:42:51.672180       1 flags.go:64] FLAG: --cluster-cidr="10.224.0.0/16"
+I0910 21:42:51.672186       1 flags.go:64] FLAG: --config=""
+I0910 21:42:51.672191       1 flags.go:64] FLAG: --config-sync-period="15m0s"
+I0910 21:42:51.672198       1 flags.go:64] FLAG: --conntrack-max-per-core="32768"
+I0910 21:42:51.672204       1 flags.go:64] FLAG: --conntrack-min="131072"
+I0910 21:42:51.672210       1 flags.go:64] FLAG: --conntrack-tcp-timeout-close-wait="0s"
+I0910 21:42:51.672215       1 flags.go:64] FLAG: --conntrack-tcp-timeout-established="0s"
+I0910 21:42:51.672221       1 flags.go:64] FLAG: --detect-local-mode=""
+I0910 21:42:51.672232       1 flags.go:64] FLAG: --feature-gates=""
+I0910 21:42:51.672241       1 flags.go:64] FLAG: --healthz-bind-address="0.0.0.0:10256"
+I0910 21:42:51.672266       1 flags.go:64] FLAG: --healthz-port="10256"
+I0910 21:42:51.672271       1 flags.go:64] FLAG: --help="false"
+I0910 21:42:51.672276       1 flags.go:64] FLAG: --hostname-override=""
+I0910 21:42:51.672280       1 flags.go:64] FLAG: --iptables-masquerade-bit="14"
+I0910 21:42:51.672286       1 flags.go:64] FLAG: --iptables-min-sync-period="1s"
+I0910 21:42:51.672291       1 flags.go:64] FLAG: --iptables-sync-period="30s"
+I0910 21:42:51.672297       1 flags.go:64] FLAG: --ipvs-exclude-cidrs="[]"
+I0910 21:42:51.672319       1 flags.go:64] FLAG: --ipvs-min-sync-period="0s"
+I0910 21:42:51.672330       1 flags.go:64] FLAG: --ipvs-scheduler=""
+I0910 21:42:51.672335       1 flags.go:64] FLAG: --ipvs-strict-arp="false"
+I0910 21:42:51.672340       1 flags.go:64] FLAG: --ipvs-sync-period="30s"
+I0910 21:42:51.672346       1 flags.go:64] FLAG: --ipvs-tcp-timeout="0s"
+I0910 21:42:51.672351       1 flags.go:64] FLAG: --ipvs-tcpfin-timeout="0s"
+I0910 21:42:51.672356       1 flags.go:64] FLAG: --ipvs-udp-timeout="0s"
+I0910 21:42:51.672362       1 flags.go:64] FLAG: --kube-api-burst="10"
+I0910 21:42:51.672367       1 flags.go:64] FLAG: --kube-api-content-type="application/vnd.kubernetes.protobuf"
+I0910 21:42:51.672373       1 flags.go:64] FLAG: --kube-api-qps="5"
+I0910 21:42:51.672384       1 flags.go:64] FLAG: --kubeconfig="/etc/kubernetes/kubeconfig/kubeconfig.yaml"
+I0910 21:42:51.672391       1 flags.go:64] FLAG: --log-backtrace-at=":0"
+I0910 21:42:51.672401       1 flags.go:64] FLAG: --log-dir=""
+I0910 21:42:51.672406       1 flags.go:64] FLAG: --log-file=""
+I0910 21:42:51.672410       1 flags.go:64] FLAG: --log-file-max-size="1800"
+I0910 21:42:51.672416       1 flags.go:64] FLAG: --log-flush-frequency="5s"
+I0910 21:42:51.672422       1 flags.go:64] FLAG: --logtostderr="true"
+I0910 21:42:51.672427       1 flags.go:64] FLAG: --machine-id-file="/etc/machine-id,/var/lib/dbus/machine-id"
+I0910 21:42:51.672434       1 flags.go:64] FLAG: --masquerade-all="false"
+I0910 21:42:51.672440       1 flags.go:64] FLAG: --master=""
+I0910 21:42:51.672446       1 flags.go:64] FLAG: --metrics-bind-address="0.0.0.0:10249"
+I0910 21:42:51.672452       1 flags.go:64] FLAG: --metrics-port="10249"
+I0910 21:42:51.672456       1 flags.go:64] FLAG: --nodeport-addresses="[]"
+I0910 21:42:51.672463       1 flags.go:64] FLAG: --one-output="false"
+I0910 21:42:51.672468       1 flags.go:64] FLAG: --oom-score-adj="-999"
+I0910 21:42:51.672474       1 flags.go:64] FLAG: --pod-bridge-interface=""
+I0910 21:42:51.672479       1 flags.go:64] FLAG: --pod-interface-name-prefix=""
+I0910 21:42:51.672484       1 flags.go:64] FLAG: --profiling="false"
+I0910 21:42:51.672490       1 flags.go:64] FLAG: --proxy-mode="iptables"
+I0910 21:42:51.672497       1 flags.go:64] FLAG: --proxy-port-range=""
+I0910 21:42:51.672507       1 flags.go:64] FLAG: --show-hidden-metrics-for-version=""
+I0910 21:42:51.672512       1 flags.go:64] FLAG: --skip-headers="false"
+I0910 21:42:51.672517       1 flags.go:64] FLAG: --skip-log-headers="false"
+I0910 21:42:51.672522       1 flags.go:64] FLAG: --stderrthreshold="2"
+I0910 21:42:51.672528       1 flags.go:64] FLAG: --udp-timeout="250ms"
+I0910 21:42:51.672533       1 flags.go:64] FLAG: --v="3"
+I0910 21:42:51.672539       1 flags.go:64] FLAG: --version="false"
+I0910 21:42:51.672550       1 flags.go:64] FLAG: --vmodule=""
+I0910 21:42:51.672556       1 flags.go:64] FLAG: --write-config-to=""
+I0910 21:42:51.672575       1 server.go:230] "Warning, all flags other than --config, --write-config-to, and --cleanup are deprecated, please begin using a config file ASAP"
+I0910 21:42:51.672635       1 feature_gate.go:245] feature gates: &{map[]}
+I0910 21:42:51.672706       1 feature_gate.go:245] feature gates: &{map[]}
+E0910 21:42:51.673048       1 proxier.go:656] "Failed to read builtin modules file, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" err="open /lib/modules/5.15.0-1041-azure/modules.builtin: no such file or directory" filePath="/lib/modules/5.15.0-1041-azure/modules.builtin"
+I0910 21:42:51.675082       1 proxier.go:666] "Failed to load kernel module with modprobe, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" moduleName="ip_vs"
+I0910 21:42:51.677161       1 proxier.go:666] "Failed to load kernel module with modprobe, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" moduleName="ip_vs_rr"
+I0910 21:42:51.681501       1 proxier.go:666] "Failed to load kernel module with modprobe, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" moduleName="ip_vs_wrr"
+I0910 21:42:51.683363       1 proxier.go:666] "Failed to load kernel module with modprobe, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" moduleName="ip_vs_sh"
+I0910 21:42:51.685020       1 proxier.go:666] "Failed to load kernel module with modprobe, you can ignore this message when kube-proxy is running inside container without mounting /lib/modules" moduleName="nf_conntrack"
+time="2023-09-10T21:42:51Z" level=warning msg="Running modprobe ip_vs failed with message: `modprobe: WARNING: Module ip_vs not found in directory /lib/modules/5.15.0-1041-azure`, error: exit status 1"
+E0910 21:42:51.690409       1 node.go:152] Failed to retrieve node info: Get "https://hcp-kubernetes.64fe36a49612be00012ddfc7.svc.cluster.local:443/api/v1/nodes/kube-apiserver-7677677b6b-4dc2g": dial tcp 127.0.0.1:443: connect: connection refused
+E0910 21:42:55.143670       1 node.go:152] Failed to retrieve node info: nodes "kube-apiserver-7677677b6b-4dc2g" is forbidden: User "vnetIntegrationProxy" cannot get resource "nodes" in API group "" at the cluster scope: Azure does not have opinion for this non AAD user. If you are an AAD user, please set Extra:oid parameter for impersonated user in the kubeconfig
+E0910 21:42:57.351463       1 node.go:152] Failed to retrieve node info: nodes "kube-apiserver-7677677b6b-4dc2g" not found
+E0910 21:43:01.920791       1 node.go:152] Failed to retrieve node info: nodes "kube-apiserver-7677677b6b-4dc2g" not found
+E0910 21:43:10.063447       1 node.go:152] Failed to retrieve node info: nodes "kube-apiserver-7677677b6b-4dc2g" not found
+E0910 21:43:28.022928       1 node.go:152] Failed to retrieve node info: nodes "kube-apiserver-7677677b6b-4dc2g" not found
+I0910 21:43:28.022959       1 server.go:854] "Can't determine this node's IP, assuming 127.0.0.1; if this is incorrect, please set the --bind-address flag"
+I0910 21:43:28.022992       1 server_others.go:138] "Detected node IP" address="127.0.0.1"
+I0910 21:43:28.023234       1 server_others.go:177] "DetectLocalMode" LocalMode="ClusterCIDR"
+I0910 21:43:28.053202       1 server_others.go:201] "kube-proxy running in single-stack mode, this ipFamily is not supported" ipFamily=IPv6
+I0910 21:43:28.053225       1 server_others.go:208] "Using iptables Proxier"
+I0910 21:43:28.053262       1 proxier.go:262] "Setting route_localnet=1, use nodePortAddresses to filter loopback addresses for NodePorts to skip it https://issues.k8s.io/90259"
+I0910 21:43:28.053362       1 proxier.go:278] "Using iptables mark for masquerade" ipFamily=IPv4 mark="0x00004000"
+I0910 21:43:28.053428       1 proxier.go:322] "Iptables sync params" ipFamily=IPv4 minSyncPeriod="1s" syncPeriod="30s" burstSyncs=2
+I0910 21:43:28.053481       1 proxier.go:332] "Iptables supports --random-fully" ipFamily=IPv4
+I0910 21:43:28.053633       1 server.go:662] "Version info" version="v1.25.11"
+I0910 21:43:28.053646       1 server.go:664] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0910 21:43:28.053700       1 oom_linux.go:76] write /proc/self/oom_score_adj: permission denied
+I0910 21:43:28.154836       1 oom_linux.go:76] write /proc/self/oom_score_adj: permission denied
+I0910 21:43:28.255241       1 oom_linux.go:83] failed to set "/proc/self/oom_score_adj" to "-999": write /proc/self/oom_score_adj: permission denied
+I0910 21:43:28.255343       1 server.go:671] "Failed to apply OOMScore" err="write /proc/self/oom_score_adj: permission denied"
+I0910 21:43:28.255990       1 proxier_health.go:110] "Starting healthz HTTP server" address="0.0.0.0:10256"
+I0910 21:43:28.257882       1 server.go:816] "GetConntrackMax: using conntrack-min"
+I0910 21:43:28.257937       1 conntrack.go:52] "Setting nf_conntrack_max" nf_conntrack_max=131072
+I0910 21:43:28.258141       1 bounded_frequency_runner.go:192] sync-runner Loop running
+I0910 21:43:28.258181       1 config.go:444] "Starting node config controller"
+I0910 21:43:28.258208       1 shared_informer.go:252] Waiting for caches to sync for node config
+I0910 21:43:28.258327       1 reflector.go:221] Starting reflector *v1.EndpointSlice (15m0s) from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258354       1 reflector.go:257] Listing and watching *v1.EndpointSlice from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258444       1 reflector.go:221] Starting reflector *v1.Node (15m0s) from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258460       1 reflector.go:257] Listing and watching *v1.Node from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258564       1 reflector.go:221] Starting reflector *v1.Service (15m0s) from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258576       1 reflector.go:257] Listing and watching *v1.Service from vendor/k8s.io/client-go/informers/factory.go:134
+I0910 21:43:28.258712       1 config.go:317] "Starting service config controller"
+I0910 21:43:28.258714       1 config.go:226] "Starting endpoint slice config controller"
+I0910 21:43:28.258721       1 shared_informer.go:252] Waiting for caches to sync for service config
+I0910 21:43:28.258742       1 shared_informer.go:252] Waiting for caches to sync for endpoint slice config
+I0910 21:43:28.262197       1 service.go:324] "Service updated ports" service="default/kubernetes" portCount=1
+I0910 21:43:28.262237       1 service.go:324] "Service updated ports" service="kube-system/kube-dns" portCount=2
+I0910 21:43:28.262292       1 service.go:324] "Service updated ports" service="kube-system/metrics-server" portCount=1
+E0910 21:43:28.277679       1 event_broadcaster.go:253] Server rejected event '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-apiserver-7677677b6b-4dc2g.1783a7a424f7a51e", GenerateName:"", Namespace:"default", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, EventTime:time.Date(2023, time.September, 10, 21, 43, 28, 258121738, time.Local), Series:(*v1.EventSeries)(nil), ReportingController:"kube-proxy", ReportingInstance:"kube-proxy-kube-apiserver-7677677b6b-4dc2g", Action:"StartKubeProxy", Reason:"Starting", Regarding:v1.ObjectReference{Kind:"Node", Namespace:"", Name:"kube-apiserver-7677677b6b-4dc2g", UID:"kube-apiserver-7677677b6b-4dc2g", APIVersion:"", ResourceVersion:"", FieldPath:""}, Related:(*v1.ObjectReference)(nil), Note:"", Type:"Normal", DeprecatedSource:v1.EventSource{Component:"", Host:""}, DeprecatedFirstTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeprecatedLastTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeprecatedCount:0}': 'events.events.k8s.io is forbidden: User "vnetIntegrationProxy" cannot create resource "events" in API group "events.k8s.io" in the namespace "default": Azure does not have opinion for this non AAD user. If you are an AAD user, please set Extra:oid parameter for impersonated user in the kubeconfig' (will not retry!)
+I0910 21:43:28.358777       1 shared_informer.go:259] Caches are synced for service config
+I0910 21:43:28.358790       1 shared_informer.go:259] Caches are synced for node config
+I0910 21:43:28.358813       1 shared_informer.go:259] Caches are synced for endpoint slice config
+I0910 21:43:28.358829       1 config.go:233] "Calling handler.OnEndpointSlicesSynced()"
+I0910 21:43:28.358828       1 config.go:451] "Calling handler.OnNodeSynced()"
+I0910 21:43:28.358809       1 config.go:324] "Calling handler.OnServiceSynced()"
+I0910 21:43:28.358961       1 service.go:440] "Adding new service port" portName="kube-system/metrics-server" servicePort="10.0.121.50:443/TCP"
+I0910 21:43:28.358993       1 service.go:440] "Adding new service port" portName="default/kubernetes:https" servicePort="10.0.0.1:443/TCP"
+I0910 21:43:28.359020       1 service.go:440] "Adding new service port" portName="kube-system/kube-dns:dns" servicePort="10.0.0.10:53/UDP"
+I0910 21:43:28.359036       1 service.go:440] "Adding new service port" portName="kube-system/kube-dns:dns-tcp" servicePort="10.0.0.10:53/TCP"
+I0910 21:43:28.359112       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="default/kubernetes:https" endpoints=[10.226.0.4:443]
+I0910 21:43:28.359151       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:43:28.412200       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=1 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:43:28.415777       1 proxier.go:817] "SyncProxyRules complete" elapsed="56.907592ms"
+I0910 21:43:28.415812       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:43:28.449807       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=1 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:43:28.453396       1 proxier.go:817] "SyncProxyRules complete" elapsed="37.589059ms"
+I0910 21:48:52.164880       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.28:53]
+I0910 21:48:52.164904       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.28:53]
+I0910 21:48:52.164918       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:48:52.201406       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=3 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:48:52.204747       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.910093ms"
+I0910 21:48:52.204763       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:48:54.157232       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.24:4443]
+I0910 21:48:54.157266       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:48:54.199933       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=4 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:48:54.203657       1 proxier.go:817] "SyncProxyRules complete" elapsed="46.467341ms"
+I0910 21:48:54.203682       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:48:54.203738       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.24:4443]
+I0910 21:48:54.203771       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.24:4443]
+I0910 21:48:54.203789       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:48:54.238252       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=5 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:48:54.241639       1 proxier.go:817] "SyncProxyRules complete" elapsed="37.937678ms"
+I0910 21:48:54.241658       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:06.966113       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.24:4443]
+I0910 21:49:06.966155       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.24:4443]
+I0910 21:49:06.966171       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:07.003826       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=5 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:49:07.007366       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.320095ms"
+I0910 21:49:07.007384       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:08.205001       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.24:4443]
+I0910 21:49:08.205028       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443]
+I0910 21:49:08.205045       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:08.241285       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=4 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:49:08.244750       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.782384ms"
+I0910 21:49:08.244779       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:09.191603       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.28:53]
+I0910 21:49:09.191645       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.28:53]
+I0910 21:49:09.191668       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.191680       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.191697       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:09.231682       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=6 numFilterChains=5 numFilterRules=6 numNATChains=6 numNATRules=10
+I0910 21:49:09.235074       1 proxier.go:817] "SyncProxyRules complete" elapsed="43.509911ms"
+I0910 21:49:09.235104       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:09.235162       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.235181       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.235210       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.235224       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:09.235294       1 proxier.go:834] "Stale service" protocol="udp" servicePortName="kube-system/kube-dns:dns" clusterIP="10.0.0.10"
+I0910 21:49:09.235308       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:09.270305       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=6 numFilterChains=5 numFilterRules=4 numNATChains=10 numNATRules=20
+I0910 21:49:09.282348       1 proxier.go:817] "SyncProxyRules complete" elapsed="47.225538ms"
+I0910 21:49:09.282363       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:10.283538       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:10.283569       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:10.283601       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:10.283614       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/kube-dns:dns-tcp" endpoints=[10.224.0.12:53 10.224.0.28:53]
+I0910 21:49:10.283636       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:10.318631       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=6 numFilterChains=5 numFilterRules=4 numNATChains=12 numNATRules=26
+I0910 21:49:10.322614       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.16468ms"
+I0910 21:49:10.322634       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:19.210471       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443]
+I0910 21:49:19.210511       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443]
+I0910 21:49:19.210529       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:19.246456       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=4 numNATChains=12 numNATRules=26
+I0910 21:49:19.250761       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.335791ms"
+I0910 21:49:19.250783       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:29.232071       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443]
+I0910 21:49:29.232100       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:49:29.232114       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:29.268096       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=8 numFilterChains=5 numFilterRules=4 numNATChains=12 numNATRules=26
+I0910 21:49:29.271996       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.011486ms"
+I0910 21:49:29.272014       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:49:59.403690       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:49:59.403729       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:49:59.403745       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:49:59.444127       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=8 numFilterChains=5 numFilterRules=3 numNATChains=14 numNATRules=31
+I0910 21:49:59.448099       1 proxier.go:817] "SyncProxyRules complete" elapsed="44.448317ms"
+I0910 21:49:59.448118       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:50:27.315673       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:27.315702       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:27.315715       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:50:27.358768       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=8 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0910 21:50:27.363522       1 proxier.go:817] "SyncProxyRules complete" elapsed="47.864406ms"
+I0910 21:50:27.363547       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:50:27.363618       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:27.363652       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:27.363668       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:50:27.402392       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=8 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=32
+I0910 21:50:27.406371       1 proxier.go:817] "SyncProxyRules complete" elapsed="42.802174ms"
+I0910 21:50:27.406390       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:50:29.362887       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:29.362929       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:29.362945       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:50:29.400346       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=8 numFilterChains=5 numFilterRules=3 numNATChains=14 numNATRules=31
+I0910 21:50:29.404163       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.317064ms"
+I0910 21:50:29.404182       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:50:29.404250       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.20:4443 10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:29.404277       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:29.404292       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:50:29.438959       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=14 numNATRules=31
+I0910 21:50:29.442820       1 proxier.go:817] "SyncProxyRules complete" elapsed="38.618447ms"
+I0910 21:50:29.442843       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 21:50:37.434217       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:37.434263       1 endpointslicecache.go:358] "Setting endpoints for service port name" portName="kube-system/metrics-server" endpoints=[10.224.0.7:4443 10.224.0.8:4443]
+I0910 21:50:37.434281       1 proxier.go:850] "Syncing iptables rules"
+I0910 21:50:37.471573       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0910 21:50:37.475814       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.643196ms"
+I0910 21:50:37.475832       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 22:50:37.476362       1 proxier.go:850] "Syncing iptables rules"
+I0910 22:50:37.511739       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0910 22:50:37.515756       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.519639ms"
+I0910 22:50:37.515780       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0910 23:50:37.516024       1 proxier.go:850] "Syncing iptables rules"
+I0910 23:50:37.551711       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0910 23:50:37.555625       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.642484ms"
+I0910 23:50:37.555644       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 00:50:37.555816       1 proxier.go:850] "Syncing iptables rules"
+I0911 00:50:37.590996       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 00:50:37.594845       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.068414ms"
+I0911 00:50:37.594864       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 01:50:37.595049       1 proxier.go:850] "Syncing iptables rules"
+I0911 01:50:37.632209       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 01:50:37.636204       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.189688ms"
+I0911 01:50:37.636223       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 02:50:37.636398       1 proxier.go:850] "Syncing iptables rules"
+I0911 02:50:37.672178       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 02:50:37.676243       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.88137ms"
+I0911 02:50:37.676265       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 03:50:37.677371       1 proxier.go:850] "Syncing iptables rules"
+I0911 03:50:37.713963       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 03:50:37.718196       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.861282ms"
+I0911 03:50:37.718220       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 04:50:37.718371       1 proxier.go:850] "Syncing iptables rules"
+I0911 04:50:37.753653       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 04:50:37.757723       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.391869ms"
+I0911 04:50:37.757747       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 05:50:37.758047       1 proxier.go:850] "Syncing iptables rules"
+I0911 05:50:37.794981       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 05:50:37.798916       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.906179ms"
+I0911 05:50:37.798936       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 06:50:37.799139       1 proxier.go:850] "Syncing iptables rules"
+I0911 06:50:37.838450       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 06:50:37.843234       1 proxier.go:817] "SyncProxyRules complete" elapsed="44.158601ms"
+I0911 06:50:37.843256       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 07:50:37.843452       1 proxier.go:850] "Syncing iptables rules"
+I0911 07:50:37.879240       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 07:50:37.883263       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.886462ms"
+I0911 07:50:37.883282       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 08:50:37.884509       1 proxier.go:850] "Syncing iptables rules"
+I0911 08:50:37.920976       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 08:50:37.924957       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.486576ms"
+I0911 08:50:37.924981       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 09:50:37.925121       1 proxier.go:850] "Syncing iptables rules"
+I0911 09:50:37.961258       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 09:50:37.965745       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.664785ms"
+I0911 09:50:37.965766       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 10:50:37.966027       1 proxier.go:850] "Syncing iptables rules"
+I0911 10:50:38.002914       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 10:50:38.007064       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.077303ms"
+I0911 10:50:38.007116       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 11:50:38.007444       1 proxier.go:850] "Syncing iptables rules"
+I0911 11:50:38.042687       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 11:50:38.046760       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.398063ms"
+I0911 11:50:38.046779       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 12:50:38.047217       1 proxier.go:850] "Syncing iptables rules"
+I0911 12:50:38.086845       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 12:50:38.091172       1 proxier.go:817] "SyncProxyRules complete" elapsed="43.986013ms"
+I0911 12:50:38.091200       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 13:50:38.091442       1 proxier.go:850] "Syncing iptables rules"
+I0911 13:50:38.128237       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 13:50:38.132250       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.8455ms"
+I0911 13:50:38.132270       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 14:50:38.133711       1 proxier.go:850] "Syncing iptables rules"
+I0911 14:50:38.174108       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 14:50:38.179268       1 proxier.go:817] "SyncProxyRules complete" elapsed="45.594925ms"
+I0911 14:50:38.179288       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 15:50:38.180065       1 proxier.go:850] "Syncing iptables rules"
+I0911 15:50:38.216586       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 15:50:38.220594       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.574678ms"
+I0911 15:50:38.220619       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 16:50:38.221897       1 proxier.go:850] "Syncing iptables rules"
+I0911 16:50:38.257721       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 16:50:38.261732       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.906616ms"
+I0911 16:50:38.261755       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 17:50:38.262879       1 proxier.go:850] "Syncing iptables rules"
+I0911 17:50:38.300176       1 proxier.go:1487] "Reloading service iptables data" numServices=4 numEndpoints=7 numFilterChains=5 numFilterRules=3 numNATChains=15 numNATRules=34
+I0911 17:50:38.304459       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.620147ms"
+I0911 17:50:38.304479       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 18:34:45.005631       1 service.go:324] "Service updated ports" service="default/php-apache" portCount=1
+I0911 18:34:45.005729       1 service.go:440] "Adding new service port" portName="default/php-apache" servicePort="10.0.67.196:80/TCP"
+I0911 18:34:45.005755       1 proxier.go:850] "Syncing iptables rules"
+I0911 18:34:45.047490       1 proxier.go:1487] "Reloading service iptables data" numServices=5 numEndpoints=7 numFilterChains=5 numFilterRules=4 numNATChains=15 numNATRules=34
+I0911 18:34:45.051436       1 proxier.go:817] "SyncProxyRules complete" elapsed="45.741021ms"
+I0911 18:34:45.051455       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 18:34:45.051487       1 proxier.go:850] "Syncing iptables rules"
+I0911 18:34:45.086705       1 proxier.go:1487] "Reloading service iptables data" numServices=5 numEndpoints=7 numFilterChains=5 numFilterRules=4 numNATChains=15 numNATRules=34
+I0911 18:34:45.090858       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.385076ms"
+I0911 18:34:45.090881       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 18:48:43.213522       1 service.go:324] "Service updated ports" service="hello-world/php-apache" portCount=1
+I0911 18:48:43.213625       1 service.go:440] "Adding new service port" portName="hello-world/php-apache" servicePort="10.0.235.159:80/TCP"
+I0911 18:48:43.213657       1 proxier.go:850] "Syncing iptables rules"
+I0911 18:48:43.258835       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 18:48:43.263390       1 proxier.go:817] "SyncProxyRules complete" elapsed="49.809741ms"
+I0911 18:48:43.263413       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 18:48:43.263448       1 proxier.go:850] "Syncing iptables rules"
+I0911 18:48:43.301363       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 18:48:43.305505       1 proxier.go:817] "SyncProxyRules complete" elapsed="42.071988ms"
+I0911 18:48:43.305530       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 19:48:43.305960       1 proxier.go:850] "Syncing iptables rules"
+I0911 19:48:43.342340       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 19:48:43.346993       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.099281ms"
+I0911 19:48:43.347016       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 20:48:43.347245       1 proxier.go:850] "Syncing iptables rules"
+I0911 20:48:43.383614       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 20:48:43.387650       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.451389ms"
+I0911 20:48:43.387670       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 21:48:43.387848       1 proxier.go:850] "Syncing iptables rules"
+I0911 21:48:43.424084       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 21:48:43.428180       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.40628ms"
+I0911 21:48:43.428201       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 22:48:43.428375       1 proxier.go:850] "Syncing iptables rules"
+I0911 22:48:43.466116       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 22:48:43.470706       1 proxier.go:817] "SyncProxyRules complete" elapsed="42.364226ms"
+I0911 22:48:43.470731       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0911 23:48:43.471761       1 proxier.go:850] "Syncing iptables rules"
+I0911 23:48:43.510004       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0911 23:48:43.514011       1 proxier.go:817] "SyncProxyRules complete" elapsed="42.2952ms"
+I0911 23:48:43.514031       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 00:48:43.514910       1 proxier.go:850] "Syncing iptables rules"
+I0912 00:48:43.551871       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 00:48:43.556473       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.612888ms"
+I0912 00:48:43.556495       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 01:48:43.557853       1 proxier.go:850] "Syncing iptables rules"
+I0912 01:48:43.592791       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 01:48:43.596791       1 proxier.go:817] "SyncProxyRules complete" elapsed="38.977191ms"
+I0912 01:48:43.596811       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 02:48:43.598532       1 proxier.go:850] "Syncing iptables rules"
+I0912 02:48:43.635421       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 02:48:43.639457       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.966384ms"
+I0912 02:48:43.639479       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 03:48:43.640357       1 proxier.go:850] "Syncing iptables rules"
+I0912 03:48:43.676753       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 03:48:43.680977       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.659976ms"
+I0912 03:48:43.680996       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 04:48:43.681162       1 proxier.go:850] "Syncing iptables rules"
+I0912 04:48:43.726577       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 04:48:43.730731       1 proxier.go:817] "SyncProxyRules complete" elapsed="49.60125ms"
+I0912 04:48:43.730752       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 05:48:43.731267       1 proxier.go:850] "Syncing iptables rules"
+I0912 05:48:43.766843       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 05:48:43.771305       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.074373ms"
+I0912 05:48:43.771329       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 06:48:43.772343       1 proxier.go:850] "Syncing iptables rules"
+I0912 06:48:43.811688       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 06:48:43.815914       1 proxier.go:817] "SyncProxyRules complete" elapsed="43.605717ms"
+I0912 06:48:43.815942       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 07:48:43.816456       1 proxier.go:850] "Syncing iptables rules"
+I0912 07:48:43.853438       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 07:48:43.857688       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.397676ms"
+I0912 07:48:43.857714       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 08:48:43.859944       1 proxier.go:850] "Syncing iptables rules"
+I0912 08:48:43.901781       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 08:48:43.906931       1 proxier.go:817] "SyncProxyRules complete" elapsed="47.02418ms"
+I0912 08:48:43.906954       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 09:48:43.907204       1 proxier.go:850] "Syncing iptables rules"
+I0912 09:48:43.944484       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 09:48:43.948716       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.550596ms"
+I0912 09:48:43.948738       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 10:48:43.949015       1 proxier.go:850] "Syncing iptables rules"
+I0912 10:48:43.986601       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 10:48:43.990715       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.73659ms"
+I0912 10:48:43.990734       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 11:48:43.992256       1 proxier.go:850] "Syncing iptables rules"
+I0912 11:48:44.028083       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 11:48:44.032170       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.952883ms"
+I0912 11:48:44.032189       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 12:48:44.033306       1 proxier.go:850] "Syncing iptables rules"
+I0912 12:48:44.070582       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 12:48:44.074811       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.574686ms"
+I0912 12:48:44.074833       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 13:48:44.075006       1 proxier.go:850] "Syncing iptables rules"
+I0912 13:48:44.112677       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 13:48:44.117643       1 proxier.go:817] "SyncProxyRules complete" elapsed="42.671587ms"
+I0912 13:48:44.117667       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 14:48:44.119255       1 proxier.go:850] "Syncing iptables rules"
+I0912 14:48:44.177432       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 14:48:44.182458       1 proxier.go:817] "SyncProxyRules complete" elapsed="63.280644ms"
+I0912 14:48:44.182480       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 15:48:44.183248       1 proxier.go:850] "Syncing iptables rules"
+I0912 15:48:44.226517       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 15:48:44.230598       1 proxier.go:817] "SyncProxyRules complete" elapsed="47.412922ms"
+I0912 15:48:44.230619       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 16:48:44.231211       1 proxier.go:850] "Syncing iptables rules"
+I0912 16:48:44.267348       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 16:48:44.271246       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.070662ms"
+I0912 16:48:44.271265       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 17:48:44.271854       1 proxier.go:850] "Syncing iptables rules"
+I0912 17:48:44.308510       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 17:48:44.312808       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.000381ms"
+I0912 17:48:44.312828       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 18:48:44.313197       1 proxier.go:850] "Syncing iptables rules"
+I0912 18:48:44.350560       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 18:48:44.354970       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.825327ms"
+I0912 18:48:44.354993       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 19:48:44.355189       1 proxier.go:850] "Syncing iptables rules"
+I0912 19:48:44.390929       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 19:48:44.395056       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.901368ms"
+I0912 19:48:44.395080       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 20:48:44.395791       1 proxier.go:850] "Syncing iptables rules"
+I0912 20:48:44.432455       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 20:48:44.436543       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.795187ms"
+I0912 20:48:44.436561       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 21:48:44.437762       1 proxier.go:850] "Syncing iptables rules"
+I0912 21:48:44.473641       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 21:48:44.477732       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.005692ms"
+I0912 21:48:44.477749       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 22:48:44.480283       1 proxier.go:850] "Syncing iptables rules"
+I0912 22:48:44.516442       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 22:48:44.520775       1 proxier.go:817] "SyncProxyRules complete" elapsed="40.530576ms"
+I0912 22:48:44.520795       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0912 23:48:44.523633       1 proxier.go:850] "Syncing iptables rules"
+I0912 23:48:44.559435       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0912 23:48:44.563565       1 proxier.go:817] "SyncProxyRules complete" elapsed="39.973005ms"
+I0912 23:48:44.563585       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
+I0913 00:48:44.564028       1 proxier.go:850] "Syncing iptables rules"
+I0913 00:48:44.600880       1 proxier.go:1487] "Reloading service iptables data" numServices=6 numEndpoints=7 numFilterChains=5 numFilterRules=5 numNATChains=15 numNATRules=34
+I0913 00:48:44.605305       1 proxier.go:817] "SyncProxyRules complete" elapsed="41.473486ms"
+I0913 00:48:44.605325       1 bounded_frequency_runner.go:296] sync-runner: ran, next possible in 1s, periodic in 1h0m0s
