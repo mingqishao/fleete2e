@@ -1,0 +1,10 @@
+RG=minsha0926
+MEMBER=byovnet-member-2
+FLEET=byovnet-0926-1
+
+az aks create -g ${RG} -n ${MEMBER} --generate-ssh-keys --network-plugin azure --node-count 1
+
+MEMBER_ID=$(az aks show -g ${RG} -n ${MEMBER}  \
+    --query id --output tsv)
+
+az fleet member create -g $RG --fleet-name $FLEET --member-cluster-id=${MEMBER_ID} -n ${MEMBER}
