@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y curl iputils-ping
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+COPY fleet-0.2.9-py3-none-any.whl /tmp/fleet-0.2.9-py3-none-any.whl
+RUN az extension add -s /tmp/fleet-0.2.9-py3-none-any.whl -y
+RUN az aks install-cli
+RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" \
+    && chmod a+x /kubectl \
+    && mv ./kubectl /usr/bin/kubectl

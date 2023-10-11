@@ -1,0 +1,28 @@
+{
+    "stages": [
+        {
+            "name": "stage1",
+            "groups": [
+                {
+                    "name": "group-1a"
+                },
+                {
+                    "name": "group-1b"
+                }
+            ],
+            "afterStageWaitInSeconds": 20
+        },
+        {
+            "name": "stage1",
+            "groups": [
+                {
+                    "name": "group-1a"
+                },
+                {
+                    "name": "group-1b"
+                }
+            ],
+            "afterStageWaitInSeconds": 20
+        }
+    ]
+}
