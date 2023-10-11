@@ -19,8 +19,8 @@ parameters=$(cat <<-END
     "value": $PRIVATE
   },
   "msi": {
-    "value": $MSI_ID
-  },
+    "value": "$MSI_ID"
+  }
 }
 END
 )

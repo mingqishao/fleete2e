@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+#set -x
 
 RG="${1}"
 FLEET="${2}"
@@ -35,6 +35,8 @@ MSI_SP_ID=$(az identity show \
   --resource-group $RG \
   --name $MSI \
   --query principalId --output tsv)
+
+sleep 10 
 
 az role assignment create --scope $API_SUBNET_ID \
 --role "Network Contributor" \

@@ -23,7 +23,7 @@
                 "hubProfile": {
                     "dnsPrefix": "[parameters('name')]",
                     "apiServerAccessProfile": {
-                        "enablePrivateCluster": true,
+                        "enablePrivateCluster": false,
                         "enableVnetIntegration": true
                     }
                 }
