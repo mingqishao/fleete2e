@@ -1,0 +1,18 @@
+[
+    {
+      "category": "kube-apiserver",
+      "enabled": true,
+      "retentionPolicy": {
+        "days": 0,
+        "enabled": false
+      }
+    },
+    {
+      "category": "kube-audit",
+      "enabled": true,
+      "retentionPolicy": {
+        "days": 0,
+        "enabled": false
+      }
+    }
+  ]

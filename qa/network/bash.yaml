@@ -6,3 +6,5 @@ spec:
   containers:
     - name: bash
       image: shaomq/env
+      command: ["tail"]
+      args: ["-f", "/dev/null"]

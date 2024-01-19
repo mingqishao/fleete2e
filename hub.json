@@ -20,14 +20,17 @@
             "name": "[parameters('name')]",
             "location": "[parameters('location')]",
             "identity": {
-                "type": "SystemAssigned"
+                "type": "UserAssigned",
+                "userAssignedIdentities":{
+                    "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourcegroups/minsha/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi": {}
+                }
             },
             "sku": {
                 "name": "Base",
                 "tier": "Standard"
             },
             "properties": {
-                "dnsPrefix": "testDnsPrefix",
+                "dnsPrefix": "[parameters('name')]",
                 "agentPoolProfiles": [
                     {
                         "name": "agentpool",
@@ -35,7 +38,8 @@
                         "osType": "Linux",
                         "mode": "System",
                         "osSKU": "Ubuntu",
-                        "vmSize": "Standard_D4s_v4"
+                        "vmSize": "Standard_D4s_v4",
+                        "vnetSubnetID": "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourceGroups/minsha/providers/Microsoft.Network/virtualNetworks/v1-vnet/subnets/node"
                     }
                 ],
                 "enableRBAC": true,
@@ -48,6 +52,10 @@
                     "adminUsers": null,
                     "enableAzureRBAC": true,
                     "tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+                },
+                "apiServerAccessProfile": {
+                    "enablePrivateCluster": true,
+                    "enableVnetIntegration": false
                 },
                 "maxAgentPools": 100,
                 "autoUpgradeProfile": {

@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "eventHubAuthorizationRuleId": "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourcegroups/minsha/providers/Microsoft.EventHub/namespaces/minshaeventhub/authorizationrules/RootManageSharedAccessKey",
+    "eventHubName": "minshahub",
+    "logAnalyticsDestinationType": "AzureDiagnostics",
+    "logs": [
+      {
+        "category": "kube-apiserver",
+        "categoryGroup": null,
+        "enabled": true,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "kube-audit",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "kube-audit-admin",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "kube-controller-manager",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "kube-scheduler",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "cloud-controller-manager",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      },
+      {
+        "category": "guard",
+        "categoryGroup": null,
+        "enabled": false,
+        "retentionPolicy": {
+          "days": 0,
+          "enabled": false
+        }
+      }
+    ],
+    "metrics": [],
+    "serviceBusRuleId": null,
+    "storageAccountId": null,
+    "workspaceId": null
+  },
+  "tags": null,
+  "type": "Microsoft.Insights/diagnosticSettings"
+}

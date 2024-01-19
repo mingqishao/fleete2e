@@ -1,0 +1,45 @@
+{
+    "type": "Microsoft.ContainerService/managedClusters",
+    "location": "eastus",
+    "identity": {
+        "type": "SystemAssigned"
+    },
+    "sku": {
+        "name": "Base",
+        "tier": "Standard"
+    },
+    "properties": {
+        "dnsPrefix": "hubnodeless",
+        "enablePodSecurityPolicy": false,
+        "enableRBAC": true,
+        "networkProfile": {
+            "networkPlugin": "azure"
+        },
+        "aadProfile": {
+            "managed": true,
+            "adminGroupObjectIDs": null,
+            "adminUsers": null,
+            "enableAzureRBAC": true,
+            "tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        "apiServerAccessProfile": {
+            "enablePrivateCluster": false,
+            "enableVnetIntegration": false
+        },
+        "maxAgentPools": 100,
+        "autoUpgradeProfile": {
+            "upgradeChannel": "patch"
+        },
+        "storageProfile": {
+            "diskCSIDriver": {
+                "enabled": false
+            },
+            "fileCSIDriver": {
+                "enabled": false
+            },
+            "snapshotController": {
+                "enabled": false
+            }
+        }
+    }
+}

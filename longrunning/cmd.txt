@@ -1,4 +1,0 @@
-KUBECONFIG=~/.kube/fleet kubectl get memberclusters
-KUBECONFIG=~/.kube/fleet kubectl create namespace hello-world
-KUBECONFIG=~/.kube/fleet kubectl apply -f crp.yaml
-KUBECONFIG=~/.kube/fleet kubectl get clusterresourceplacements

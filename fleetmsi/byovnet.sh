@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#set -x
+set -x
 
 RG="${1}"
 FLEET="${2}"
 
+LOCATION=eastus
 VNET=$FLEET-vnet
 API_SUBNET=api
 NODE_SUBNET=node
@@ -13,7 +14,8 @@ MEMBER=$FLEET-member
 
 az network vnet create -n ${VNET} \
 -g $RG \
---address-prefixes 172.19.0.0/16
+--address-prefixes 172.19.0.0/16 \
+-l $LOCATION
 
 API_SUBNET_ID=$(az network vnet subnet create -g $RG \
 --vnet-name $VNET \
@@ -74,11 +76,11 @@ echo "creating fleet..."
 az deployment group create -g $RG --template-file  ./byovnet.json  --name $FLEET --parameters "${parameters}"
 
 
-echo "creating member..."
-az aks create -g ${RG} -n ${MEMBER} --generate-ssh-keys --network-plugin azure --node-count 1
+# echo "creating member..."
+# az aks create -g ${RG} -n ${MEMBER} --generate-ssh-keys --network-plugin azure --node-count 1
 
-MEMBER_ID=$(az aks show -g ${RG} -n ${MEMBER}  \
-    --query id --output tsv)
+# MEMBER_ID=$(az aks show -g ${RG} -n ${MEMBER}  \
+#     --query id --output tsv)
 
-echo "join member..."
-az fleet member create -g $RG --fleet-name $FLEET --member-cluster-id=${MEMBER_ID} -n ${MEMBER}
+# echo "join member..."
+# az fleet member create -g $RG --fleet-name $FLEET --member-cluster-id=${MEMBER_ID} -n ${MEMBER}
