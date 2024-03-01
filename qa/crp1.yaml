@@ -1,7 +1,7 @@
 apiVersion: fleet.azure.com/v1alpha1
 kind: ClusterResourcePlacement
 metadata:
-  name: crp1
+  name: crp
 spec:
   resourceSelectors:
     - group: ""

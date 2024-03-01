@@ -20,46 +20,41 @@
             "name": "[parameters('name')]",
             "location": "[parameters('location')]",
             "identity": {
-                "type": "UserAssigned",
-                "userAssignedIdentities":{
-                    "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourcegroups/minsha/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi": {}
-                }
+                "type": "SystemAssigned"
             },
             "sku": {
                 "name": "Base",
                 "tier": "Standard"
             },
             "properties": {
-                "dnsPrefix": "[parameters('name')]",
+                "aadProfile": {
+                    "managed": true,
+                    "enableAzureRBAC": true
+                },
                 "agentPoolProfiles": [
                     {
                         "name": "agentpool",
-                        "count": 1,
+                        "count": 2,
                         "osType": "Linux",
+                        "type": "VirtualMachineScaleSets",
                         "mode": "System",
-                        "osSKU": "Ubuntu",
-                        "vmSize": "Standard_D4s_v4",
-                        "vnetSubnetID": "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourceGroups/minsha/providers/Microsoft.Network/virtualNetworks/v1-vnet/subnets/node"
+                        "vmSize": "Standard_D4s_v3",
+                        "orchestratorVersion": "1.27",
+                        "vnetSubnetID": "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourceGroups/minsha/providers/Microsoft.Network/virtualNetworks/vnet/subnets/node"
                     }
                 ],
-                "enableRBAC": true,
-                "networkProfile": {
-                    "networkPlugin": "azure"
-                },
-                "aadProfile": {
-                    "managed": true,
-                    "adminGroupObjectIDs": null,
-                    "adminUsers": null,
-                    "enableAzureRBAC": true,
-                    "tenantID": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-                },
-                "apiServerAccessProfile": {
-                    "enablePrivateCluster": true,
-                    "enableVnetIntegration": false
-                },
-                "maxAgentPools": 100,
                 "autoUpgradeProfile": {
                     "upgradeChannel": "patch"
+                },
+                "apiServerAccessProfile": {
+                    "enablePrivateCluster": true 
+                },
+
+                "enableRBAC": true,
+                "dnsPrefix": "[parameters('name')]",
+                "kubernetesVersion": "1.27",
+                "networkProfile": {
+                    "networkPlugin": "azure"
                 },
                 "storageProfile": {
                     "diskCSIDriver": {
