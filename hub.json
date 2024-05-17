@@ -34,13 +34,12 @@
                 "agentPoolProfiles": [
                     {
                         "name": "agentpool",
-                        "count": 2,
+                        "count": 1,
                         "osType": "Linux",
                         "type": "VirtualMachineScaleSets",
                         "mode": "System",
                         "vmSize": "Standard_D4s_v3",
-                        "orchestratorVersion": "1.27",
-                        "vnetSubnetID": "/subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourceGroups/minsha/providers/Microsoft.Network/virtualNetworks/vnet/subnets/node"
+                        "orchestratorVersion": "1.28"
                     }
                 ],
                 "autoUpgradeProfile": {
@@ -52,7 +51,7 @@
 
                 "enableRBAC": true,
                 "dnsPrefix": "[parameters('name')]",
-                "kubernetesVersion": "1.27",
+                "kubernetesVersion": "1.28",
                 "networkProfile": {
                     "networkPlugin": "azure"
                 },

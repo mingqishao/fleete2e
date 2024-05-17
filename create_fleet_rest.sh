@@ -6,10 +6,13 @@ fleet="${3}"
 
 body=$(cat <<-END
 {
-    "location": "westus2",
+    "location": "westus",
     "properties": {
         "hubProfile": {
-            "dnsPrefix": "$fleet"
+            "dnsPrefix": "$fleet",
+            "agentProfile": {
+                "vmSize": "badsize"
+            }
         }
     }
 }
@@ -17,8 +20,8 @@ END
 )
 
 echo $body
+# --headers "fleet-configuration-version=-2" \
 
 az rest --method PUT \
-    --headers "fleet-configuration-version=-2" \
     --url "https://management.azure.com/subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.ContainerService/fleets/$fleet?api-version=2023-08-15-preview" \
     --body "$body"
