@@ -1,0 +1,21 @@
+apiVersion: cluster.kubernetes-fleet.io/v1
+kind: MemberCluster
+metadata:
+  annotations:
+    fleet.azure.com/cluster-resource-id: /subscriptions/8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8/resourceGroups/minshabb/providers/Microsoft.ContainerService/managedClusters/memberwe
+  finalizers:
+  - kubernetes-fleet.io/membercluster-finalizer
+  labels:
+    fleet.azure.com/location: westeurope
+    fleet.azure.com/resource-group: minshabb
+    fleet.azure.com/subscription-id: 8ecadfc9-d1a3-4ea4-b844-0d9f87e4d7c8
+  name: memberwe
+spec:
+  heartbeatPeriodSeconds: 60
+  identity:
+    kind: User
+    name: 5b4c8db9-1c5d-42c5-9053-2bc2548e6de1
+  taints:
+  - key: location
+    # value: westeurope
+    # effect: NoSchedule

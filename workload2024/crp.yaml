@@ -1,0 +1,39 @@
+apiVersion: placement.kubernetes-fleet.io/v1beta1
+kind: ClusterResourcePlacement
+metadata:
+  name: crp
+spec:
+  resourceSelectors:
+    - group: ""
+      kind: Namespace
+      version: v1          
+      name: work
+    # - group: ""
+    #   kind: Namespace
+    #   version: v1          
+    #   name: work2
+    # - group: "rbac.authorization.k8s.io"
+    #   kind: ClusterRole
+    #   version: v1          
+    #   name: role1
+  policy:
+    placementType: PickAll
+    # numberOfClusters: 2
+    affinity:
+      clusterAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          clusterSelectorTerms:
+          - labelSelector:
+              matchLabels:
+                fleet.azure.com/location: westeurope
+    # tolerations:
+    #   - key: location
+    #     operator: Equal
+    #     value: westeurope
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 10
+      unavailablePeriodSeconds: 3
+
