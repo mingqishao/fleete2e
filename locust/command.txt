@@ -1,0 +1,6 @@
+RG=minsha-workload
+WORKLOAD_CLUSTER=workload
+CALLER_CLUSTER=caller
+
+az aks create -g $RG --name $WORKLOAD_CLUSTER --enable-managed-identity --node-count 3 --generate-ssh-keys -k 1.27
+az aks create -g $RG --name $CALLER_CLUSTER --enable-managed-identity --node-count 5 --generate-ssh-keys -k 1.27
